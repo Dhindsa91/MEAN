@@ -1,5 +1,7 @@
-<h1>{{vm.title}}</h1>
+<h1>
+    {{ vm.title }}</h1>
 <ul>
-    <li nq-repeat="hotel in vm.hotels">
-        <a ng-href="#/hotel/{{ hotel._id}}"></a>{{hotel.name}}</li>
+    <li ng-repeat="hotel in vm.hotels">
+        <a ng-href="#/hotel/{{ hotel._id }}">{{ hotel.name }}</a>
+    </li>
 </ul>

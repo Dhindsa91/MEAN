@@ -16,7 +16,6 @@ router
   .put(ctrlHotels.hotelsUpdateOne)
   .delete(ctrlHotels.hotelsDeleteOne);
 
-
 // Review routes
 router
   .route('/hotels/:hotelId/reviews')
