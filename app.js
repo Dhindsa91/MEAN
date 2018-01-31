@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
+var ctrlHotels = require('./api/controllers/hotels.controllers.js');
 
 var routes = require('./api/routes');
 
@@ -19,7 +20,9 @@ app.use(function(req, res, next) {
   console.log(req.method, req.url);
   next();
 });
-
+app.use('/hotels', function() {
+  console.log('api');
+});
 // Set static directory before defining routes
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
