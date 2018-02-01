@@ -11,10 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/fullstacktraining/mean-stack-hero.git"
   },
-  "keywords": [
-    "mean"
-  ],
-  "author": "Full Stack Training",
+  "keywords": ["mean"],
+  "author": "Arvind Dhindsa",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fullstacktraining/mean-stack-hero/issues"
@@ -26,7 +24,7 @@
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "mocha": "^5.0.0",
-    "mongodb": "^3.0.2",
+    "mongodb": "^2.2.34",
     "mongoose": "^4.4.8"
   },
   "devDependencies": {}

@@ -72,6 +72,7 @@ module.exports.hotelsGetAll = function(req, res) {
     return;
   }
 
+
   Hotel.find()
     .skip(offset)
     .limit(count)
@@ -86,6 +87,7 @@ module.exports.hotelsGetAll = function(req, res) {
         res.json(hotels);
       }
     });
+
 };
 
 module.exports.hotelsGetOne = function(req, res) {
@@ -155,7 +157,7 @@ module.exports.hotelsUpdateOne = function(req, res) {
   var hotelId = req.params.hotelId;
 
   console.log('GET hotelId', hotelId);
-
+  console.log(req.query);
   Hotel.findById(hotelId)
     .select('-reviews -rooms')
     .exec(function(err, hotel) {
