@@ -38,8 +38,12 @@ modules.export.login = function(req, res) {
       console.log(err);
       res.status(400).json(err);
     } else {
-      console.log('user found', user);
-      res.status(201).json(user);
+      if (bcrypt.compareSync(password, user.password)) {
+        console.log('user found', user);
+        res.status(201).json(user);
+      } else {
+        res.status(401).json('unauthorized');
+      }
     }
   });
 };
