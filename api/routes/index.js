@@ -3,10 +3,11 @@ var router = express.Router();
 
 var ctrlHotels = require('../controllers/hotels.controllers.js');
 var ctrlReviews = require('../controllers/reviews.controllers.js');
+var ctrlUsers = require('../controllers/users.controller.js');
 
 router
   .route('/hotels')
-  .get(ctrlHotels.hotelsGetAll)
+  .get(ctrlUsers.authenticate, ctrlHotels.hotelsGetAll)
   .post(ctrlHotels.hotelsAddOne);
 
 router
