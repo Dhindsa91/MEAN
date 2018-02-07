@@ -26,4 +26,8 @@ router
   .put(ctrlReviews.reviewsUpdateOne)
   .delete(ctrlReviews.reviewsDeleteOne);
 
+router.route('users/register').post(ctrlUsers.register);
+
+router.route('/users/login').post(ctrlUsers.login);
+
 module.exports = router;

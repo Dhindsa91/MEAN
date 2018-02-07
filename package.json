@@ -11,7 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/fullstacktraining/mean-stack-hero.git"
   },
-  "keywords": ["mean"],
+  "keywords": [
+    "mean"
+  ],
   "author": "Arvind Dhindsa",
   "license": "ISC",
   "bugs": {
@@ -21,6 +23,7 @@
   "dependencies": {
     "angular": "^1.6.8",
     "angular-route": "^1.6.8",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "mocha": "^5.0.0",
