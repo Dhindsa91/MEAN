@@ -10,6 +10,9 @@ var userSchema = new mongoose.Schema({
     type: String
   },
   password: {
-    type: String
+    type: String,
+    required: true
   }
 });
+
+mongoose.model('User', userSchema);
